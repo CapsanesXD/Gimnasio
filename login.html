@@ -1,28 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-    <button onclick="window.location.href='index.html'"> <strong>Regresa al inicio</strong> </button></h3>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏋️ Gymbros | Iniciar Sesión</title>
+  <style>
+    /* aqui pongo los colores que voy a usar... no quiero buscarlos depues*/
+    :root {
+      --rojo: #e63946;
+      --negro: #000000;
+      --gris: #f5f5f5;
+      --blanco: #ffffff;
+      --dorado: #ffcc00;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--gris);
+      color: var(--negro);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--rojo);
+      color: var(--blanco);
+      text-align: center;
+      padding: 1px;
+    }
+
+    nav {
+      background-color: var(--negro);
+      text-align: center;
+      padding: 5px;
+    }
+
+    nav button {
+      background-color: var(--rojo);
+      color: var(--blanco);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin: 5px;
+    }
+
+    nav button:hover {
+      background-color: var(--dorado);
+      color: var(--negro);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    form {
+      background-color: var(--blanco);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--rojo);
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid var(--negro);
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: var(--rojo);
+      color: var(--blanco);
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: var(--dorado);
+      color: var(--negro);
+    }
+
+    .extra-links {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .extra-links a {
+      color: var(--rojo);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .extra-links a:hover {
+      color: var(--dorado);
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer a {
+      color: var(--dorado);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--rojo);
+    }
+  </style>
 <body>
-    <form> <!--siempre iniciamos con la etiqueta form-->
-  <p> <!--Siempre creamos la linea de parrafo-->
-    <label for="identificacion">Tu identificacion</label>
-    <!--creamos el label que ira antes de la caja de texto-->
-    <input type="text" id="identificacion"name="identificacion">
-    <!--cierra la caja de texto-->
-      </p><!--cerramos el parrafo-->
-  <p><!--abrimos otro parrafo-->
-    <label for="contraseña">Tu contraseña</label><!--creamos el label o titulo tu contraseña-->
-    <input type="password" id="contraseña" name="contraseña"><!--creamos la caja para digitar la contraseña-->
-  </p>
-  <p> 
-    <button type="submit">Ingresar/login</button>
-      
-    </p>
-  
-</form>
+  <header>
+  <img src="logo gym.png" alt="Una imagen representativa de inicio" width="450" height="150">
+    <h2>Bienvenido de nuevo, ¡es hora de entrenar!</h2>
+  </header>
+
+  <nav>
+    <button onclick="window.location.href='index.html'">Inicio</button>
+    <button onclick="window.location.href='index2.html'">Planes</button>
+  </nav>
+
+  <main>
+    <form action="#" method="post">
+      <h2>Iniciar Sesión</h2>
+
+      <label for="identificacion">Identificación:</label>
+      <input type="text" id="identificacion" name="identificacion" placeholder="Ingresa tu número o usuario" required>
+
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" id="contraseña" name="contraseña" placeholder="Tu contraseña" required>
+
+      <input type="submit" value="Entrar al gimnasio">
+
+      <div class="extra-links">
+        <p>¿No tienes cuenta? <a href="index2.html">Suscríbete aquí</a></p>
+        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Gymbros. Todos los derechos reservados.</p>
+    <p><a href="index.html">Volver al inicio</a></p>
+  </footer>
 </body>
+</head>
 </html>
