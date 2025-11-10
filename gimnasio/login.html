@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏋️ Gymbros | Iniciar Sesión</title>
+  <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+  <header>
+    <img src="../imagenes/aaaaa.jpg" alt="Logo Gymbros" width="150" class="logo">
+    <h2>¡Bienvenido de nuevo, guerrero del hierro!</h2>
+  </header>
+
+  <nav>
+    <button onclick="window.location.href='indexgim.html'">Inicio</button>
+    <button onclick="window.location.href='planes.html'">Planes</button>
+  </nav>
+
+  <main>
+    <section class="login-container">
+      <form action="#" method="post">
+        <h2>Iniciar Sesión</h2>
+
+        <label for="identificacion">Identificación:</label>
+        <input type="text" id="identificacion" name="identificacion" placeholder="Ingresa tu número o usuario" required>
+
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Tu contraseña" required>
+
+        <input type="submit" value="Entrar al gimnasio">
+
+        <div class="extra-links">
+          <p>¿No tienes cuenta? <a href="../gimnasio/planes.html">Suscríbete aquí</a></p>
+          <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gymbros. Todos los derechos reservados.</p>
+    <p><a href="../gimnasio/indexgim.html">Volver al inicio</a></p>
+  </footer>
+</body>
+</html>

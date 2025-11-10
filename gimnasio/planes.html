@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💪 Gymbros | Planes</title>
+  <link rel="stylesheet" href="../style/planes.css">
+</head>
+<body>
+  <header>
+    <img src="../imagenes/aaaaa.jpg" alt="Logo Gymbros" width="120" height="120">
+    <h2>GYMBROS</h2>
+  </header>
+
+  <nav>
+    <button onclick="location.href='indexgim.html'">Inicio</button>
+    <button onclick="location.href='planes.html'">Planes</button>
+    <button onclick="location.href='login.html'">Iniciar sesión</button>
+  </nav>
+
+  <main>
+    <section class="section">
+      <h3>💰 Planes de entrenamiento</h3>
+      <p>
+        Selecciona el plan que más se ajuste a tus objetivos. En Gymbros tenemos opciones para todos los niveles.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Plan</th>
+              <th>Duración</th>
+              <th>Incluye</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Básico</td>
+              <td>1 mes</td>
+              <td>Acceso a máquinas, área de cardio y duchas</td>
+              <td class="price">$50.000</td>
+            </tr>
+            <tr>
+              <td>Intermedio</td>
+              <td>6 meses</td>
+              <td>Todo lo anterior + asesoramiento personalizado</td>
+              <td class="price">$250.000</td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td>1 año</td>
+              <td>Entrenador personal + Nutricionista + Acceso 24/7</td>
+              <td class="price">$450.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>🔥 Beneficios exclusivos</h3>
+      <p>
+        Entrenamientos personalizados con seguimiento profesional, acceso a eventos y charlas fitness, y descuentos en suplementos.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gymbros. Todos los derechos reservados. | <a href="#">Términos y condiciones</a></p>
+  </footer>
+
+  <!-- ===== Script para versión responsive de tabla ===== -->
+  <script>
+  (function() {
+    const table = document.querySelector('.table-container table');
+    if (!table) return;
+
+    const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+    const rows = table.querySelectorAll('tbody tr');
+
+    rows.forEach(row => {
+      const cells = Array.from(row.querySelectorAll('td'));
+      cells.forEach((td, i) => {
+        const label = headers[i] || '';
+        td.setAttribute('data-label', label);
+        if (!td.querySelector('.cell-value')) {
+          const inner = document.createElement('span');
+          inner.className = 'cell-value';
+          while (td.firstChild) inner.appendChild(td.firstChild);
+          td.appendChild(inner);
+        }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
